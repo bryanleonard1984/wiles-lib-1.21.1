@@ -1,17 +1,17 @@
 {
 	"schemaVersion": 1,
 	"id": "wileslib",
-	"version": "${version}",
+	"version": "0.1",
 	"name": "Wiles Lib",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This is just a library with helper methods and interfaces to build my mods.",
 	"authors": [
-		"Me!"
+		"bryanleonard1984"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/wileslib/icon.png",
 	"environment": "*",
 	"entrypoints": {
