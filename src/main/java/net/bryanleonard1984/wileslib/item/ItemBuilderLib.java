@@ -8,35 +8,35 @@ import net.minecraft.util.Identifier;
 
 public class ItemBuilderLib
 {
-    public static Item createAxeItem(String id, String name, ToolMaterials material,
+    public static Item createAxeItem(String id, String name, ToolMaterial material,
                                            float baseAttack, float attackSpeed)
     {
         return registerItem(id, name, new AxeItem(material, new Item.Settings().attributeModifiers(
                 AxeItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
     }
 
-    public static Item createHoeItem(String id, String name, ToolMaterials material,
+    public static Item createHoeItem(String id, String name, ToolMaterial material,
                               float baseAttack, float attackSpeed)
     {
         return registerItem(id, name, new HoeItem(material, new Item.Settings().attributeModifiers(
                 HoeItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
     }
 
-    public static Item createPickaxeItem(String id, String name, ToolMaterials material,
+    public static Item createPickaxeItem(String id, String name, ToolMaterial material,
                                   float baseAttack, float attackSpeed)
     {
         return registerItem(id, name, new PickaxeItem(material, new Item.Settings().attributeModifiers(
                 PickaxeItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
     }
 
-    public static Item createShovelItem(String id, String name, ToolMaterials material,
+    public static Item createShovelItem(String id, String name, ToolMaterial material,
                                  float baseAttack, float attackSpeed)
     {
         return registerItem(id, name, new ShovelItem(material, new Item.Settings().attributeModifiers(
                 ShovelItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
     }
 
-    public static Item createSwordItem(String id, String name, ToolMaterials material,
+    public static Item createSwordItem(String id, String name, ToolMaterial material,
                                 int baseAttack, float attackSpeed)
     {
         return registerItem(id, name, new SwordItem(material, new Item.Settings().attributeModifiers(

@@ -8,9 +8,7 @@ import static net.minecraft.data.server.recipe.RecipeProvider.*;
 
 public class RecipeBuilderLib
 {
-    public RecipeBuilderLib() {}
-
-    public void AxeRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter, String path)
+    public static void AxeRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter, String path)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
                 .pattern("II ")
@@ -27,7 +25,7 @@ public class RecipeBuilderLib
                 .criterion(hasItem(input), conditionsFromItem(input)).offerTo(recipeExporter, path + "_flipped");
     }
 
-    public void HoeRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter, String path)
+    public static void HoeRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter, String path)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
                 .pattern("II ")
@@ -44,7 +42,7 @@ public class RecipeBuilderLib
                 .criterion(hasItem(input), conditionsFromItem(input)).offerTo(recipeExporter, path + "_flipped");
     }
 
-    public void PickaxeRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    public static void PickaxeRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
                 .pattern("III")
@@ -54,7 +52,7 @@ public class RecipeBuilderLib
                 .criterion(hasItem(input), conditionsFromItem(input)).offerTo(recipeExporter);
     }
 
-    public void ShovelRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    public static void ShovelRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
                 .pattern(" I ")
@@ -64,7 +62,7 @@ public class RecipeBuilderLib
                 .criterion(hasItem(input), conditionsFromItem(input)).offerTo(recipeExporter);
     }
 
-    public void SwordRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    public static void SwordRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern(" I ")
@@ -74,7 +72,7 @@ public class RecipeBuilderLib
                 .criterion(hasItem(input), conditionsFromItem(input)).offerTo(recipeExporter);
     }
 
-    public void BootsRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    public static void BootsRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("I I")
@@ -83,7 +81,7 @@ public class RecipeBuilderLib
                 .criterion(hasItem(input), conditionsFromItem(input)).offerTo(recipeExporter);
     }
 
-    public void ChestplateRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    public static void ChestplateRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("I I")
@@ -93,7 +91,7 @@ public class RecipeBuilderLib
                 .criterion(hasItem(input), conditionsFromItem(input)).offerTo(recipeExporter);
     }
 
-    public void HelmetRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    public static void HelmetRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("III")
@@ -102,7 +100,7 @@ public class RecipeBuilderLib
                 .criterion(hasItem(input), conditionsFromItem(input)).offerTo(recipeExporter);
     }
 
-    public void LeggingsRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    public static void LeggingsRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, output)
                 .pattern("III")
@@ -112,7 +110,7 @@ public class RecipeBuilderLib
                 .criterion(hasItem(input), conditionsFromItem(input)).offerTo(recipeExporter);
     }
 
-    public void compactingRecipeWithEightItems(ItemConvertible output, ItemConvertible input,
+    public static void compactingRecipeWithEightItems(ItemConvertible output, ItemConvertible input,
                                                String group, RecipeExporter recipeExporter)
     {
         offerShapelessRecipe(recipeExporter, output, input, group, 8);
@@ -124,7 +122,7 @@ public class RecipeBuilderLib
                 .offerTo(recipeExporter);
     }
 
-    public void eggRecipe(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    public static void eggRecipe(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output)
                 .pattern("###")
@@ -135,7 +133,7 @@ public class RecipeBuilderLib
                 .offerTo(recipeExporter);
     }
 
-    public void horseArmorRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    public static void horseArmorRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
     {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, output)
                 .pattern("#  ")
