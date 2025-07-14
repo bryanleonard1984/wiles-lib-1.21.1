@@ -6,9 +6,9 @@ import net.minecraft.recipe.book.RecipeCategory;
 
 import static net.minecraft.data.server.recipe.RecipeProvider.*;
 
-public class RecipeBuilder
+public class RecipeBuilderLib
 {
-    public RecipeBuilder() {}
+    public RecipeBuilderLib() {}
 
     public void AxeRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter, String path)
     {

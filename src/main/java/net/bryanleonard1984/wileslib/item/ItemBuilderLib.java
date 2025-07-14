@@ -6,7 +6,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
-public class ModItems
+public class ItemBuilderLib
 {
     public static Item createAxeItem(String id, String name, ToolMaterials material,
                                            float baseAttack, float attackSpeed)
