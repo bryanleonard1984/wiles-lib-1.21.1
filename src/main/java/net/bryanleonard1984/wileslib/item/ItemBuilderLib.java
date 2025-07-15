@@ -49,6 +49,7 @@ public class ItemBuilderLib
         return registerItem(id, name, new ArmorItem(material, type, new Item.Settings()
                 .maxDamage(type.getMaxDamage(maxDamage))));
     }
+
     private static Item registerItem(String id, String name, Item item)
     {
         return Registry.register(Registries.ITEM, Identifier.of(id, name), item);

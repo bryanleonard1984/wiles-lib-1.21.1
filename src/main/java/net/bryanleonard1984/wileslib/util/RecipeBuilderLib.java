@@ -143,4 +143,26 @@ public class RecipeBuilderLib
                 .criterion(hasItem(Items.SADDLE), conditionsFromItem(Items.SADDLE))
                 .offerTo(recipeExporter);
     }
+
+    public static void HammerRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
+                .pattern(" IS")
+                .pattern(" SI")
+                .pattern("S  ")
+                .input('I', input).input('S', Items.STICK)
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(recipeExporter);
+    }
+
+    public static void ChiselRecipes(ItemConvertible output, ItemConvertible input, RecipeExporter recipeExporter)
+    {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, output)
+                .pattern("S  ")
+                .pattern(" I ")
+                .pattern("  I")
+                .input('I', input).input('S', Items.STICK)
+                .criterion(hasItem(input), conditionsFromItem(input))
+                .offerTo(recipeExporter);
+    }
 }
