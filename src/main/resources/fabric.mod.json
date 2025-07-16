@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "wileslib",
-	"version": "0.1",
+	"version": "0.3.1",
 	"name": "Wiles Lib",
 	"description": "This is just a library with helper methods and interfaces to build my mods.",
 	"authors": [
@@ -23,7 +23,7 @@
 		"wileslib.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.14",
+		"fabricloader": ">=0.16.10",
 		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
