@@ -36,11 +36,25 @@ public class ItemBuilderLib
         getLogger().info("Registering Mod Items for " + getId());
     }
 
+    public Item createAxeItem(String name, ToolMaterial material,
+                              float baseAttack, float attackSpeed)
+    {
+        return registerItem(getId(), name, new AxeItem(material, new Item.Settings().attributeModifiers(
+                AxeItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
+    }
+
     public Item createAxeItem(String id, String name, ToolMaterial material,
                                      float baseAttack, float attackSpeed)
     {
         return registerItem(id, name, new AxeItem(material, new Item.Settings().attributeModifiers(
                 AxeItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
+    }
+
+    public Item createHoeItem(String name, ToolMaterial material,
+                              float baseAttack, float attackSpeed)
+    {
+        return registerItem(getId(), name, new HoeItem(material, new Item.Settings().attributeModifiers(
+                HoeItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
     }
 
     public Item createHoeItem(String id, String name, ToolMaterial material,
@@ -50,11 +64,25 @@ public class ItemBuilderLib
                 HoeItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
     }
 
+    public Item createPickaxeItem(String name, ToolMaterial material,
+                                  float baseAttack, float attackSpeed)
+    {
+        return registerItem(getId(), name, new PickaxeItem(material, new Item.Settings().attributeModifiers(
+                PickaxeItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
+    }
+
     public Item createPickaxeItem(String id, String name, ToolMaterial material,
                                   float baseAttack, float attackSpeed)
     {
         return registerItem(id, name, new PickaxeItem(material, new Item.Settings().attributeModifiers(
                 PickaxeItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
+    }
+
+    public Item createShovelItem(String name, ToolMaterial material,
+                                 float baseAttack, float attackSpeed)
+    {
+        return registerItem(getId(), name, new ShovelItem(material, new Item.Settings().attributeModifiers(
+                ShovelItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
     }
 
     public Item createShovelItem(String id, String name, ToolMaterial material,
@@ -64,11 +92,25 @@ public class ItemBuilderLib
                 ShovelItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
     }
 
+    public Item createSwordItem(String name, ToolMaterial material,
+                                int baseAttack, float attackSpeed)
+    {
+        return registerItem(getId(), name, new SwordItem(material, new Item.Settings().attributeModifiers(
+                SwordItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
+    }
+
     public Item createSwordItem(String id, String name, ToolMaterial material,
                                 int baseAttack, float attackSpeed)
     {
         return registerItem(id, name, new SwordItem(material, new Item.Settings().attributeModifiers(
                 SwordItem.createAttributeModifiers(material, baseAttack, attackSpeed))));
+    }
+
+    public Item createArmorItem(String name, RegistryEntry<ArmorMaterial> material,
+                                ArmorItem.Type type, int maxDamage)
+    {
+        return registerItem(getId(), name, new ArmorItem(material, type, new Item.Settings()
+                .maxDamage(type.getMaxDamage(maxDamage))));
     }
 
     public Item createArmorItem(String id, String name, RegistryEntry<ArmorMaterial> material,
@@ -78,8 +120,15 @@ public class ItemBuilderLib
                 .maxDamage(type.getMaxDamage(maxDamage))));
     }
 
+    public Item createSimpleItem(String name)
+    {
+        return registerItem(getId(), name, new Item(new Item.Settings()));
+    }
+
     public Item createSimpleItem(String id, String name)
     {
         return registerItem(id, name, new Item(new Item.Settings()));
     }
+
+
 }

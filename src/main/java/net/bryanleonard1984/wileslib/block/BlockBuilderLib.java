@@ -48,10 +48,30 @@ public class BlockBuilderLib
     public void setLogger(Logger logger) {this.logger = logger;}
     public void setId(String id) {this.id = id;}
 
+    public Block createOre(String name, int expMin, int expMax, float hardness, float resistance,
+                           BlockSoundGroup soundGroup)
+    {
+        return registerBlock(getId(), name, new ExperienceDroppingBlock(UniformIntProvider.create(expMin, expMax),
+                AbstractBlock.Settings.create().strength(hardness, resistance).requiresTool().sounds(soundGroup)));
+    }
+
     public Block createOre(String id, String name, int expMin, int expMax, float hardness, float resistance,
                                            BlockSoundGroup soundGroup)
     {
         return registerBlock(id, name, new ExperienceDroppingBlock(UniformIntProvider.create(expMin, expMax),
                 AbstractBlock.Settings.create().strength(hardness, resistance).requiresTool().sounds(soundGroup)));
+    }
+
+    public Block createBasicBlock(String name, int hardness, int resistance, BlockSoundGroup soundGroup)
+    {
+        return registerBlock(getId(), name, new Block(AbstractBlock.Settings.create()
+                .strength(hardness, resistance).sounds(soundGroup)));
+    }
+
+    public Block createBasicBlock(String id, String name, int hardness, int resistance,
+                                  BlockSoundGroup soundGroup)
+    {
+        return registerBlock(id, name, new Block(AbstractBlock.Settings.create()
+                .strength(hardness, resistance).sounds(soundGroup)));
     }
 }
